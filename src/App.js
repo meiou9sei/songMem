@@ -64,3 +64,28 @@ process:
     - lyrics don't change, and allowing them to edit it will cause a lot of hassle
     - need to restart by pasting new lyrics for now, maybe add edit option later 
 */
+
+/* 
+todo:
+just making new songMem for now, no saving in storage or emoji generation yet
+- new song: 
+  -- create input w/ title and lyrics section
+  -- have input parse through string, creates new songMem object, with lines array, places each string in lines.
+    -- also have each line object generate their corresponding keys
+  
+- display songMem:
+  -- have lines be groupable into sections (figure out how you wanna do that) 
+  -- give label to line (which just has first 2 words automatically there)
+  -- give label to section (can changes these by double clicking btw, and clicking off - and an edit button next to it ig? for UI clarity)
+  -- can change display setting of line
+  -- can change display setting of groups of line through section
+
+- singMode:
+  -- displays cards of sections in order, with the current/previous/next one (total 3 cards) on screen
+  -- cards' lines retain their display settings
+  -- can change memorized status
+  -- can change card with arrow keys (up/left and down/right) or click
+
+
+
+*/

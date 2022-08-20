@@ -1,6 +1,6 @@
 # SongMem
 
-## An app to help you memorize song lyrics
+## A webapp to help you memorize song lyrics
 
 - Paste your song lyrics into a form, lines separated by a newline. The algorithm automatically generates lines for you for each sentence in the song (that you can edit).
 - You then group these sentences into sections and the app will assign an emoji to them (which you can change to another emoji, or custom string).
