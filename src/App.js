@@ -1,7 +1,11 @@
+import Header from "./components/Header";
+import NewSongInput from "./components/NewSongInput";
+
 function App() {
   return (
     <div className="App">
-      <p>test</p>
+      <Header />
+      <NewSongInput />
     </div>
   );
 }
@@ -59,6 +63,9 @@ process:
     -- can delete songMems
     -- can load songMem
 
+  themes:
+    -- light mode/dark mode stylesheets and toggle. implement with styled components after you're done w/ program
+    -- (have basic css for now) 
 
   * I don't think users should be able to edit lyrics?
     - lyrics don't change, and allowing them to edit it will cause a lot of hassle
