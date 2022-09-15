@@ -4,7 +4,7 @@
 
 - Paste your song lyrics into a form, lines separated by a newline. The algorithm automatically generates lines for you for each sentence in the song (that you can edit).
 - You then group these sentences into sections and the app will assign an emoji to them (which you can change to another emoji, or custom string).
-- You can then start memorizing the song. You can display the whole line, just the first 2 words, a custom string, or hide the line entirely.
+- You can then start memorizing the song. You can display the whole line, just the first 3 words, a custom string, or hide the line entirely.
 - You can change the display of whole sections of line at once. 
 - In sing mode, you use the arrow keys/mouse click to go through a card at a time of sections. Sing along while looking at the cards.
 - You can mark each section as "memorized!" or "not memorized", to know which sections to review. 

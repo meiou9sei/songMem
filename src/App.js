@@ -1,11 +1,17 @@
+import { useState } from "react";
+
 import Header from "./components/Header";
 import NewSongInput from "./components/NewSongInput";
 
 function App() {
+  //check what components to display
+  const [componentsToDisplay, setComponentsToDisplay] = useState('testComponent')
   return (
     <div className="App">
       <Header />
-      <NewSongInput />
+      <button onClick={() => setComponentsToDisplay('NewSongInput')}>Activate NewSongInput</button>
+      {componentsToDisplay === 'testComponent' ? <p>testComponent is active</p> : <p>test component not active</p>}
+      {componentsToDisplay === 'NewSongInput' && <NewSongInput />}
     </div>
   );
 }
@@ -22,15 +28,14 @@ data we need to track:
     -- id
     -- the string of lyric itself
     -- has a section it's assigned to
-    -- a label (be it the first two words or a custom strong)
+    -- hint (be it the first two words or a custom strong)
     -- display status (all, part, hidden)
   -- sections
     -- id
     -- a label (be it an emoji or a custom string)
     -- which line ids it contains
     -- memorized status (true or false)
-    -- display status (none, all, part, hidden)
-
+    
 process: 
   -- view saved songMems, enter songMem, or enter new lyrics
   new lyrics:
@@ -49,8 +54,8 @@ process:
     -- change title
       -- checks if title already exists
     -- change display setting of line, or groups of lines by section
-      -- first 2 words, custom string, or hide line entirely
-    -- change custom label for line 
+      -- first 3 words, custom string, or hide line entirely
+    -- change custom hint for line 
     -- change custom label for section
     -- change memorized status of sections
 
@@ -82,7 +87,7 @@ just making new songMem for now, no saving in storage or emoji generation yet
   
 - display songMem:
   -- have lines be groupable into sections (figure out how you wanna do that) 
-  -- give label to line (which just has first 2 words automatically there)
+  -- give label to line (which just has first 3 words automatically there)
   -- give label to section (can changes these by double clicking btw, and clicking off - and an edit button next to it ig? for UI clarity)
   -- can change display setting of line
   -- can change display setting of groups of line through section
