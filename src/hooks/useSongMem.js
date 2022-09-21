@@ -1,7 +1,7 @@
 const useSongMem = (songMem) => {
 
 
-    
+
     //format lyrics into a songMem
     /*
     e.g. 
@@ -57,7 +57,7 @@ const useSongMem = (songMem) => {
         }
     }
     */
-    const formatSongMem = (songMem) {
+    const formatSongMem = (songMem) => {
         //I think this should probably be a separate hook? or just in the logic
         //of NewSongInput.js, which formats the lyrics and sends it off to useSongMem.js
     }
@@ -66,6 +66,10 @@ const useSongMem = (songMem) => {
     I think this should prob just deal w/ edit mode, sing mode, and maybe in saving?
     */ 
 
+    /**********************/
+    /* return stuff you need to allow access to use in diff outside hooks for example:
+        return {turn, currentGuess, guesses, isCorrect, handleKeyup}
+    }*/
 }
 
 export default useSongMem

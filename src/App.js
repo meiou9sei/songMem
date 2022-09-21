@@ -1,17 +1,23 @@
 import { useState } from "react";
+import useSongMem from "./hooks/useSongMem";
 
 import Header from "./components/Header";
 import NewSongInput from "./components/NewSongInput";
 
-function App() {
+function App({}) {
   //check what components to display
-  const [componentsToDisplay, setComponentsToDisplay] = useState('testComponent')
+  const [componentsToDisplay, setComponentsToDisplay] = useState('testComponent');
+  const [songMem, setSongMem] = useState('test dont you dare touch me');
+  const childsSongMem = (childdata) => {
+    setSongMem(childdata)
+  }
   return (
     <div className="App">
       <Header />
+      {songMem}
       <button onClick={() => setComponentsToDisplay('NewSongInput')}>Activate NewSongInput</button>
       {componentsToDisplay === 'testComponent' ? <p>testComponent is active</p> : <p>test component not active</p>}
-      {componentsToDisplay === 'NewSongInput' && <NewSongInput />}
+      {componentsToDisplay === 'NewSongInput' && <NewSongInput childToParent={childsSongMem} />}
     </div>
   );
 }

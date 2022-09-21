@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledNewSongInput = styled.div`
+export const StyledNewSongInput = styled.form`
     width: 100%;
     display: flex;
     flex-direction: column;
