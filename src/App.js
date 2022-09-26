@@ -1,6 +1,7 @@
 import { useState } from "react";
 import useSongMem from "./hooks/useSongMem";
 
+import GlobalStyles from "./components/styles/GlobalStyle";
 import Header from "./components/Header";
 import NewSongInput from "./components/NewSongInput";
 
@@ -13,6 +14,7 @@ function App({}) {
   }
   return (
     <div className="App">
+      <GlobalStyles/>
       <Header />
       {songMem}
       <button onClick={() => setComponentsToDisplay('NewSongInput')}>Activate NewSongInput</button>
